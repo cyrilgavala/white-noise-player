@@ -1,29 +1,27 @@
 .toggle-btn {
-    width: 200px;
+    width: 50%;
     aspect-ratio: 16 / 9;
-    font-size: .8rem;
-    padding: .5rem 1.23rem;
+    font-size: 2rem;
     border-radius: .5rem;
     background-position: center;
-    background-size: cover;
+    background-size: 100%;
     background-color: #555555;
     border: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     color: #f0f0f0;
     cursor: pointer;
+    box-shadow: 0 0 .5rem #000000;
+    transition: width 250ms ease-in-out;
 }
 
 .toggle-btn > i {
-    text-shadow: 0 0 .5rem #000000, 0 0 .25rem #000000;
+    text-shadow: 0 0 .5rem #000000;
 }
 
 .toggle-btn:hover > i {
-    text-shadow: 0 0 .25rem #f0f0f0, 0 0 .5rem #000000;
+    text-shadow: 0 0 .25rem #f0f0f0;
 }
 
 .active {
     box-shadow: 0 0 .5rem #f0f0f0;
+    width: 60%;
 }
