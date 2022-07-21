@@ -27,10 +27,9 @@ html, body {
     width: 100%;
     display: flex;
     overflow: auto;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 5vh;
-    padding: 5vh;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
     place-items: center;
     place-content: center;
 }
