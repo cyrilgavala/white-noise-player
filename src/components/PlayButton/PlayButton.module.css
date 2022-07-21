@@ -1,27 +1,49 @@
-.toggle-btn {
+.buttonWrapper {
+    position: relative;
     width: 50%;
     aspect-ratio: 16 / 9;
-    font-size: 2rem;
-    border-radius: .5rem;
+    margin: 0 auto;
     background-position: center;
     background-size: 100%;
     background-color: #555555;
+    box-shadow: 0 0 .5rem #000000;
+    transition: width 250ms ease-in-out;
+    border-radius: .5rem;
+}
+
+.toggleBtn {
+    position: relative;
+    width: 100%;
+    font-size: 2rem;
     border: none;
     color: #f0f0f0;
     cursor: pointer;
-    box-shadow: 0 0 .5rem #000000;
-    transition: width 250ms ease-in-out;
+    background-color: transparent;
+    transform: translateY(500%);
 }
 
-.toggle-btn > i {
+.toggleBtn > i {
     text-shadow: 0 0 .5rem #000000;
 }
 
-.toggle-btn:hover > i {
+.toggleBtn:hover > i {
     text-shadow: 0 0 .25rem #f0f0f0;
 }
 
 .active {
     box-shadow: 0 0 .5rem #f0f0f0;
     width: 60%;
+}
+
+.volumeRangeInput {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    caret-color: #373737;
+    background-color: #f0f0f050;
+    backdrop-filter: blur(2rem);
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
 }

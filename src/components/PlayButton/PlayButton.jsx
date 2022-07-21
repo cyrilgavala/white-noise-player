@@ -1,13 +1,24 @@
 import useAudio from "../../hooks/useAudio";
+import styles from "./PlayButton.module.css";
+import {useState} from "react";
 
 const PlayButton = ({url, image}) => {
-    const [playing, toggle] = useAudio(url);
+    const [volume, setVolume] = useState("0.5");
+    const [playing, toggle] = useAudio(url, volume);
+
+    const handleVolumeChange = event => {
+        event.preventDefault();
+        setVolume(event.target.value);
+    }
 
     return (
-        <button className={playing ? "toggle-btn active" : "toggle-btn"}
-                onClick={toggle} style={{backgroundImage: `url(${image})`}}>
-            <i className={playing ? "fa-solid fa-pause" : "fa-solid fa-play"}/>
-        </button>
+        <div className={styles.buttonWrapper} style={{backgroundImage: `url(${image})`}}>
+            <button className={styles.toggleBtn} onClick={toggle}>
+                <i className={playing ? "fa-solid fa-pause" : "fa-solid fa-play"}/>
+            </button>
+            <input className={styles.volumeRangeInput} type="range" min="0" max="1" step="0.1" value={volume}
+                   onChange={handleVolumeChange}/>
+        </div>
     );
 }
 

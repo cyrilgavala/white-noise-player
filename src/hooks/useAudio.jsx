@@ -1,16 +1,16 @@
 import {useEffect, useMemo, useState} from "react";
 
-const useAudio = url => {
+const useAudio = (url, volume) => {
     const audio = useMemo(() => new Audio(url), [url]);
     const [playing, setPlaying] = useState(false);
 
     const toggle = () => setPlaying(!playing);
 
     useEffect(() => {
-            console.log(audio)
+            audio.volume = volume;
             playing ? audio.play() : audio.pause();
         },
-        [playing, audio]
+        [playing, audio, volume]
     );
 
     useEffect(() => {
