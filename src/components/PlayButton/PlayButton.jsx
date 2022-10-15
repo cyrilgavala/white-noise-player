@@ -12,8 +12,10 @@ const PlayButton = ({url, image}) => {
     }
 
     return (
-        <div className={styles.buttonWrapper} style={{backgroundImage: `url(${image})`}}>
-            <button className={styles.toggleBtn} onClick={toggle}>
+        <div className={styles.buttonWrapper + (playing ? ` ${styles.playing}` : "")}
+             style={{backgroundImage: `url(${image})`}}
+             onClick={toggle}>
+            <button className={styles.toggleBtn}>
                 <i className={playing ? "fa-solid fa-pause" : "fa-solid fa-play"}/>
             </button>
             <input className={styles.volumeRangeInput} type="range" min="0" max="1" step="0.1" value={volume}

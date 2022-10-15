@@ -12,7 +12,6 @@ function App() {
             {makePlayButton("rain")}
             {makePlayButton("train")}
             {makePlayButton("waves")}
-            {makePlayButton("dryer")}
             {makePlayButton("blender")}
             {makePlayButton("engine")}
             {makePlayButton("vacuum")}
