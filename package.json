@@ -1,11 +1,14 @@
 {
   "name": "white-noise-player",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "typescript": "^4.8.4"
   },
   "scripts": {
     "start": "react-scripts start",

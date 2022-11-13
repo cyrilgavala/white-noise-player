@@ -1,4 +1,4 @@
-#footer {
+.footer {
     width: 100%;
     height: auto;
     backdrop-filter: blur(1rem);
@@ -10,7 +10,7 @@
     text-shadow: 0 0 .5rem #000000, 0 0 1rem #000000;
 }
 
-#footer > p > a {
+.footer > p > a {
     text-decoration: none;
     font-weight: bold;
     color: #f0f0f0;
